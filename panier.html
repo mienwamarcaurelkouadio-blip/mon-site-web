@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon panier — The Snack Spot</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="cart-page">
+
+<header class="site-header">
+    <div class="container header-content">
+        <a href="index.html" class="brand">THE <span>SNACK SPOT</span></a>
+        <a href="index.html" class="back-link">← Retour au menu</a>
+    </div>
+</header>
+
+<main class="container cart-container">
+    <div class="cart-heading">
+        <div>
+            <p class="eyebrow">THE SNACK SPOT</p>
+            <h1>🛒 Mon panier</h1>
+            <p class="subtitle">Vos crêpes préférées, prêtes à être dégustées.</p>
+        </div>
+        <div class="cart-badge" id="nombre-produits">0 article</div>
+    </div>
+
+    <section class="cart-card">
+        <div class="table-wrap table-responsive">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Prix unitaire</th>
+                        <th>Total</th>
+                        <th><span class="sr-only">Action</span></th>
+                    </tr>
+                </thead>
+                <tbody id="liste-panier"></tbody>
+            </table>
+            <div class="empty-cart" id="panier-vide" hidden>
+                <span class="empty-icon">🥞</span>
+                <h2>Votre panier est vide</h2>
+                <p>Ajoutez une délicieuse crêpe pour commencer votre commande.</p>
+                <a href="index.html" class="primary-button">Découvrir le menu</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <span>Total de la commande</span>
+            <strong id="total">0 FCFA</strong>
+        </div>
+        <div class="cart-actions">
+            <button class="secondary-button" onclick="viderPanier()">Vider le panier</button>
+                <a href="index.html" class="outline-button">＋ Ajouter un article</a>
+            <button class="whatsapp-button" onclick="commander()">Commander sur WhatsApp <span>↗</span></button>
+        </div>
+    </section>
+    <p class="secure-note">✦ Préparé avec amour à Abidjan&nbsp; • &nbsp;Paiement à la livraison</p>
+</main>
+
+<script src="panier.js"></script>
+
+
+</body>
+</html>

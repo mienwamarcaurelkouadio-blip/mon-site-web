@@ -1,0 +1,99 @@
+:root {
+	--ink: #253328;
+	--green: #216b4a;
+	--green-dark: #164d36;
+	--cream: #fffaf1;
+	--orange: #f29b38;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Arial, sans-serif;
+	color: var(--ink);
+}
+
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cart-page {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #fffaf1 0%, #f3f8ee 100%);
+}
+
+.site-header {
+	background: var(--green-dark);
+	color: white;
+	box-shadow: 0 4px 18px #164d3626;
+}
+
+.header-content {
+	min-height: 76px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 24px;
+}
+
+.brand {
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+}
+
+.brand span { color: #f7b45b; }
+.back-link { color: #f6f1df; text-decoration: none; font-size: .95rem; }
+.back-link:hover { color: #f7b45b; }
+
+.cart-container { max-width: 920px; padding: 58px 24px 40px; }
+.cart-heading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; margin-bottom: 28px; text-align: center; }
+.eyebrow { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: 2px; margin: 0 0 8px; }
+.cart-heading h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; color: var(--green-dark); }
+.subtitle { color: #68756b; margin: 8px 0 0; }
+.cart-badge { background: #e4f0df; color: var(--green); padding: 9px 15px; border-radius: 30px; font-weight: 700; white-space: nowrap; }
+
+.cart-card { background: white; border-radius: 22px; box-shadow: 0 18px 45px #2a4d2a16; overflow: hidden; }
+.table-wrap { padding: 8px 28px 0; }
+.cart-table { width: 100%; border-collapse: collapse; }
+.cart-table th { color: #7d897e; font-size: .75rem; letter-spacing: 1px; text-transform: uppercase; text-align: center; padding: 20px 8px 14px; border-bottom: 1px solid #edf0eb; }
+.cart-table td { padding: 19px 8px; border-bottom: 1px solid #edf0eb; font-weight: 600; text-align: center; }
+.cart-table td:last-child { color: var(--green); }
+.cart-table th:nth-child(2), .cart-table td:nth-child(2) { text-align: center; }
+.quantity-control { display: inline-flex; align-items: center; gap: 12px; border: 1px solid #dce6dc; border-radius: 8px; padding: 3px 7px; }
+.quantity-button { min-height: 25px; border: 0; border-radius: 6px; background: #eef6ed; color: var(--green); font-size: .78rem; font-weight: 700; line-height: 1; padding: 6px 8px; cursor: pointer; }
+.quantity-button:hover { background: #dcebd9; }
+.delete-button { border: 0; background: transparent; color: #c36a5e; cursor: pointer; font-size: 1rem; padding: 6px; }
+.delete-button:hover { color: #9e352b; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.cart-table.is-empty { display: none; }
+.empty-cart { text-align: center; padding: 48px 20px 56px; }
+.empty-icon { display: block; font-size: 3rem; margin-bottom: 12px; }
+.empty-cart h2 { margin: 0; color: var(--green-dark); }
+.empty-cart p { color: #768178; margin: 8px 0 24px; }
+.cart-summary { display: flex; justify-content: space-between; align-items: center; padding: 24px 28px; background: #fffaf1; font-size: 1rem; }
+.cart-summary strong { color: var(--green-dark); font-size: 1.5rem; }
+.cart-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 22px 28px 28px; }
+.cart-actions button, .cart-actions a { border: 0; border-radius: 10px; padding: 12px 17px; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.cart-actions button:hover, .cart-actions a:hover { transform: translateY(-2px); box-shadow: 0 7px 15px #244f351c; }
+.secondary-button { color: #a3483f; background: #fff0ed; }
+.outline-button { color: var(--green); border: 1px solid #c9ddce !important; background: white; }
+.primary-button, .whatsapp-button { color: white; background: var(--green); }
+.whatsapp-button { margin-left: 0; }
+.whatsapp-button span { margin-left: 8px; font-size: 1.1rem; }
+.secure-note { color: #829084; text-align: center; font-size: .9rem; margin: 24px 0 0; }
+
+@media (max-width: 620px) {
+	.header-content { padding: 0 18px; }
+	.cart-container { padding: 38px 16px 28px; }
+	.cart-heading { align-items: center; text-align: center; }
+	.table-wrap { padding: 8px 20px 0; }
+	.cart-summary, .cart-actions { padding-left: 20px; padding-right: 20px; }
+	.cart-actions > * { width: 100%; text-align: center; }
+	.whatsapp-button { margin-left: 0; order: -1; }
+}
